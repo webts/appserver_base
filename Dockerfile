@@ -21,7 +21,7 @@ MAINTAINER webts
 # RUN pecl install zip
 
 # compress command
-RUN yum -y update && yum install -y httpd php-gd php-mcrypt openssh-server openssl-devel wget rsync gcc php-devel php-pear make passwd php-mysql mod_ssl && pecl install mongo-1.3.5 && pecl install redis && pecl install zip
+RUN yum -y update && yum install -y httpd php-gd php-mcrypt openssh-server openssl-devel wget rsync gcc php-devel php-pear make passwd php-mysql mod_ssl && pecl install mongo && pecl install redis && pecl install zip
 
 ENTRYPOINT ["/usr/sbin/httpd"]
 CMD ["-D", "FOREGROUND"]
